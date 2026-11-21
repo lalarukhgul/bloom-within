@@ -30,35 +30,35 @@ const flowers = {
 
     lavender: {
         name: "Lavender 🪻",
-        image: "lavender.jpg",
+        image: "./lavender.jpg",
         description:
             "You are peaceful, thoughtful and quietly beautiful. You appreciate little things, enjoy peaceful moments and bring calm wherever you go."
     },
 
     sunflower: {
         name: "Sunflower 🌻",
-        image: "sunflower.jpg",
+        image: "./sunflower.jpg",
         description:
             "You are cheerful, energetic and full of positive energy. You brighten people's days and always try to find a little sunshine in every situation."
     },
 
     tulip: {
         name: "Tulip 🌷",
-        image: "tulip.jpg",
+        image: "./tulip.jpg",
         description:
             "You are sweet, caring and warm-hearted. You value genuine connections and make people feel loved through your thoughtful actions."
     },
 
     daisy: {
         name: "Daisy 🌼",
-        image: "daisy.jpg",
+        image: "./daisy.jpg",
         description:
             "You are gentle, simple and naturally charming. You find happiness in small moments and believe that life's simplest things are often the most beautiful."
     },
 
     peony: {
         name: "Peony 🌸",
-        image: "peony.jpg",
+        image: "./peony.jpg",
         description:
             "You are creative, romantic and full of imagination. You see beauty in details and express yourself through your unique ideas and emotions."
     }
@@ -303,8 +303,13 @@ function showResult() {
 
     const result = flowers[winningFlower];
 
-    resultImage.src = result.image;
-    resultImage.alt = result.name;
+    resultImage.style.display = "block";
+resultImage.src = result.image;
+resultImage.alt = result.name;
+
+resultImage.onerror = function () {
+    console.error("Flower image not found:", resultImage.src);
+};
 
     resultName.textContent = result.name;
 
