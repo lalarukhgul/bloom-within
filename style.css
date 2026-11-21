@@ -1,0 +1,270 @@
+
+/* Google font is optional */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+
+/* COLOR VARIABLES */
+
+:root {
+    --lavender: #E9DDF4;
+    --light-purple: #D8C5E9;
+    --purple: #A88BC7;
+    --dark-purple: #72558C;
+    --cream: #FFF9F5;
+    --text: #594568;
+}
+
+
+/* GENERAL STYLING */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: linear-gradient(135deg, #F5EEFB, #E9DDF4);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+}
+
+.navbar h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--dark-purple);
+}
+
+.navbar span {
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+
+/* MAIN CONTAINER */
+
+.container {
+    width: 90%;
+    max-width: 650px;
+    margin: auto;
+    padding: 35px 0;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.screen {
+    width: 100%;
+    background: rgba(255, 249, 245, 0.92);
+    padding: 55px 45px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 45px rgba(114, 85, 140, 0.12);
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* WELCOME SCREEN */
+
+.flower-decoration {
+    font-size: 55px;
+    color: var(--purple);
+    margin-bottom: 15px;
+}
+
+.eyebrow {
+    color: var(--purple);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    color: var(--dark-purple);
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.intro {
+    color: #82718D;
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 420px;
+    margin: 0 auto 30px;
+}
+
+
+/* BUTTON */
+
+.primary-btn {
+    background: var(--dark-purple);
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    background: var(--purple);
+    transform: translateY(-3px);
+}
+
+.small-note {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #A08EAA;
+}
+
+
+/* QUIZ SCREEN */
+
+.quiz-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--purple);
+    letter-spacing: 1px;
+    gap: 10px;
+}
+
+.progress-bar {
+    height: 8px;
+    background: #E9DDF4;
+    border-radius: 20px;
+    margin: 18px 0 40px;
+    overflow: hidden;
+}
+
+#progress-fill {
+    width: 10%;
+    height: 100%;
+    background: var(--purple);
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+
+#question-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    color: var(--dark-purple);
+    margin-bottom: 30px;
+}
+
+
+/* ANSWER OPTIONS */
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.option-btn {
+    width: 100%;
+    padding: 17px;
+    border: 1px solid #DCCBEA;
+    background: #FBF7FE;
+    color: var(--text);
+    border-radius: 13px;
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.option-btn:hover {
+    background: var(--lavender);
+    border-color: var(--purple);
+    transform: translateX(4px);
+}
+
+
+/* RESULT SCREEN */
+
+#result-image {
+    width: 100%;
+    max-width: 280px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 10px auto 20px;
+}
+
+#result-name {
+    font-family: 'Playfair Display', serif;
+    color: var(--dark-purple);
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+#result-description {
+    color: #82718D;
+    line-height: 1.8;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #887495;
+    font-size: 12px;
+    line-height: 2;
+}
+
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    .navbar span {
+        font-size: 8px;
+    }
+
+    .screen {
+        padding: 40px 22px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    #question-text {
+        font-size: 23px;
+    }
+
+    .quiz-top {
+        font-size: 9px;
+    }
+}
