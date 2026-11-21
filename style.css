@@ -206,15 +206,19 @@ h1 {
 /* RESULT SCREEN */
 
 
+
 #result-image {
     display: block;
     width: 100%;
-    max-width: 280px;
+    max-width: 300px;
     height: auto;
+    max-height: 380px;
     object-fit: contain;
+    object-position: center;
     border-radius: 18px;
-    margin: 18px auto 25px;
+    margin: 20px auto 25px;
 }
+
 
 
 #result-name {
