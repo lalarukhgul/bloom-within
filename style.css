@@ -210,13 +210,13 @@ h1 {
 #result-image {
     display: block;
     width: 100%;
-    max-width: 300px;
-    height: auto;
-    max-height: 380px;
+    max-width: 280px;
+    height: 340px;
     object-fit: contain;
     object-position: center;
     border-radius: 18px;
     margin: 20px auto 25px;
+    background: #F4EEF7;
 }
 
 
