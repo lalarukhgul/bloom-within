@@ -205,16 +205,17 @@ h1 {
 
 /* RESULT SCREEN */
 
+
 #result-image {
     display: block;
     width: 100%;
-    max-width: 340px;
-    height: 250px;
-    object-fit: cover;
-    object-position: center 30%;
-    border-radius: 20px;
-    margin: 15px auto 25px;
+    max-width: 280px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 18px;
+    margin: 18px auto 25px;
 }
+
 
 #result-name {
     font-family: 'Playfair Display', serif;
